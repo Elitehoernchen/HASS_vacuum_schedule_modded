@@ -20,7 +20,7 @@ blueprint:
       selector:
         entity:
           domain:
-          - binary_sensor
+          - sensor
     monday_enabled:
       name: Monday
       default: true
@@ -121,7 +121,7 @@ condition:
     == current_time)\n  or (current_day == 3 and thursday_enabled and thursday_time
     == current_time)\n  or (current_day == 4 and friday_enabled and friday_time ==
     current_time)\n  or (current_day == 5 and saturday_enabled and saturday_time ==
-    current_time)\n  or (current_day == 6 and sunday_enabled and sunday_time == current_time)) and (athome == false)\n}}\n"
+    current_time)\n  or (current_day == 6 and sunday_enabled and sunday_time == current_time)) and (athome == 'off')\n}}\n"
 action:
   service: vacuum.start
   entity_id: !input target_vacuum
