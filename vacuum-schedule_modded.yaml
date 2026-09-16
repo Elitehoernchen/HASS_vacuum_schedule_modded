@@ -112,7 +112,7 @@ variables:
   current_time: '{{ now().strftime("%H:%M:%S") }}'
 trigger:
   platform: time_pattern
-  minutes: '*'
+  hours: '*'
 condition:
   condition: template
   value_template: "{{ \n  ((current_day == 0 and monday_enabled and monday_time ==
